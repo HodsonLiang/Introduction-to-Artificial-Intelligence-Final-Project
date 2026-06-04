@@ -1,0 +1,12 @@
+# 忽略影片檔
+*.mp4
+*.avi
+
+# 忽略模型權重
+*.pt
+*.onnx
+*.engine
+
+# 忽略資料集與訓練結果
+datasets/
+runs/

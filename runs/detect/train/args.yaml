@@ -1,11 +1,11 @@
 task: detect
 mode: train
-model: yolov8n.yaml
+model: yolo26n.pt
 data: dataset_configs/kitti.yaml
 epochs: 100
 time: null
 patience: 100
-batch: 16
+batch: 32
 imgsz: 640
 save: true
 save_period: -1
@@ -13,10 +13,10 @@ cache: false
 device: '0'
 workers: 8
 project: null
-name: train
+name: train-8
 exist_ok: false
 pretrained: true
-optimizer: AdamW
+optimizer: MuSGD
 verbose: true
 seed: 0
 deterministic: true
@@ -107,4 +107,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /mnt/c/Users/hodso/OneDrive/桌面/作業/人工智慧/final_project/runs/detect/train
+save_dir: /mnt/c/Users/hodso/OneDrive/桌面/作業/人工智慧/final_project/runs/detect/train-8
